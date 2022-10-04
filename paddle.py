@@ -1,3 +1,4 @@
+import turtle
 from turtle import Turtle
 
 class Paddle:
@@ -19,5 +20,10 @@ class Paddle:
            created_paddle.append(segment)
         print(created_paddle)
 
-    def paddle_movement(self):
-        
+    def paddle_up(self):
+        turtle.setheading(270)
+        turtle.forward(20)
+
+    def paddle_down(self):
+        turtle.setheading(180)
+        turtle.forward(20)

@@ -1,0 +1,59 @@
+AWS Global Infrastructure:
+	Region - Physical Location with Cluster of DC connected with low latency networks
+	Availability Zones - Each or group of DC with independent Power & N/W
+	Wave Length Zones - Allow Developers to deploy Mobile apps instantly using mobile towers with 5G networks
+		Bell, Verizon, KDDI, SK Telecom, Vodafone
+	Local Availability Zones - Extension of AWS Regions for computation with milli second latency
+	Outposts - Power of AWS in your own on-premises with fully AWS loaded or Hybrid setup
+
+IAM - Identity and Access Management
+Level: Global
+Objects:
+	1. Users (Users can be in multiple groups)
+	2. Groups (Groups can have users but not other groups)
+	3. Policies - Least Privilage Principle [JSON (JavaScript Object Notation) -> usses Policies JSON
+		a. AWS Managed Policies
+		b. Customer Managed Policies
+		c. Inline Policies
+		Consist of:
+			Version: 2012-10-17
+			ID: (an identifier)
+			Statements:
+				SID: (an identifier)
+				Effect: (Allow/Deny)
+				Principal: the object which it applies to user/group/account
+				Actions: (which type of operation)
+				Resource: (for which resource it is for)
+	4. Roles - Permission for a service to do action on other service
+	5. IAM Security
+		Password Policy:
+			Strong Password
+			Customized Password Policy
+			Password Expiration
+			Preventy Password Reuse
+		MFA:
+			Password + Security Code
+			MFA Devices:
+				Virtual MFA (Google Authenticator, Authy etc..)
+				Universal 2nd Factor Security Key (Yubikey etc.,)
+				Hardware Key Fob MFA Device (Gemalto etc.,)
+				H/W Key Fob MFA for AWS GovCloud (US) (SurePass ID)
+		Security Tools
+			IAM Credentials Report (Account Level)
+			IAM Access Advisor (User-Level)
+			Show what are the permission least accessed by the user
+			Best to Revise policies
+
+Accessing AWS Console:
+	1. AWS Management Console
+	2. AWS CLI (Created using Boto)
+	3. AWS SDK (Java, Python, PHP, .NET, Ruby, Node.js etc.,)
+		Access KEY ID --> Username (CLI as well)
+		Secret Access Key --> Password (CLI as well)
+	4. CloudShell (Terminal in the AWS Cloud) : Works in default region
+
+Best Practices:
+	Dont Use root account
+	Create Strong Password and Use MFA
+	Create Roles for services to access other services
+	Create Programmatic Access for CLI and SDK

@@ -7,9 +7,10 @@ screen.setup(600, 400)
 screen.title("Shri's Ping Pong Table")
 screen.bgpic("woodenbg.gif")
 screen.listen()
-screen.onkey("Up")
-screen.onkey("Down")
-user_paddle = Paddle()
+paddle = Paddle()
+screen.onkey(paddle.paddle_up, "Up")
+screen.onkey(paddle.paddle_down, "Down")
+
 
 
 screen.exitonclick()
